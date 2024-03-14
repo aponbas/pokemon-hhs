@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <script type="module" src="./scripts/script.js"></script>
+    <script type="module" src="./scripts/table_script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/table_style.css">
+    <title></title>
+</head>
+
+<body>
+    <div w3-include-html="menu.html"></div>
+    <div id="content">
+        <div id="intro">Vind hier je Pokémon! Klik op "index" of "hp" om te sorteren, of filter op "type". Wanneer je op de naam van een Pokémon klikt, kom je op een nieuwe pagina met meer informatie. Als je op de afbeelding van de Pokémon klikt zie je een grotere afbeelding.</div>
+        <div id="stats">Er zijn <span id="total"></span> Pokémon in de database. De huidige lijst toont <span id="this_list"></span> Pokémon.</div>
+        <div id="table_control">
+            <label for="page_size_selection">Page size:</label>
+            <div onkeyup="pageSizeChange()" onclick="pageSizeChange()" id="page_size">            
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                <input id="page_size_selection" min=1 type="number" name="pageSize" value=5 />
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+            </div>
+            <div id="toggle">
+                Table
+                <label class="switch">
+                    <input id="table_toggle" type="checkbox" onclick="toggleTable()">
+                    <span class="slider round"></span>
+                </label>
+                Tiles
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal_content">
+        </div>
+
+        <div id="main_table">
+            <div id="table_header"></div>
+            <div id="table_content"></div>
+        </div>
+        <div id="pagination"></div>
+    </div>
+</body>
+
+</html>

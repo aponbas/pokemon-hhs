@@ -1,0 +1,43 @@
+body{
+    font-family: Helvetica, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url(/images/Bulbasaur.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin:0px;
+}
+
+/* Menu */
+
+#navigation {
+    display: flex;
+    justify-content: center;
+    background: white;
+}
+
+#navigation a {
+    text-decoration: none;
+}
+
+.navigation_button{
+    border: 1px grey solid;
+    margin: 10px;
+}
+
+.navigation_text{
+    padding: 10px;
+    color: black;
+}
+
+
+/* Content */
+
+#content{
+    width:80%;
+    margin: auto;
+    padding: 2%;
+    background:papayawhip;
+    box-shadow: 5px 5px 4px teal;
+    height: auto;
+    min-height: -webkit-fill-available;
+}

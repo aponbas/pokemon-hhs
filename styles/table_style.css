@@ -1,0 +1,318 @@
+/* Misc */
+
+#table_control{
+  display: flex;
+  align-items: center;
+}
+
+/* Header */
+
+#header_type {
+  display: flex;
+  flex-direction: column;
+}
+
+#header_index {
+  cursor: pointer;
+}
+
+#header_hp {
+  cursor: pointer;
+}
+
+select#typeDropdown {
+  min-width: 90px;
+  width: fit-content;
+  align-self: center;
+}
+
+#table_header{
+  display: flex;  
+  font-weight: bold;   
+}
+
+/* Table */
+
+#main_table {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin: auto;
+    text-align: center;
+}
+
+.table_row {
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+.row_image{
+    width: 20%;
+    height: inherit;
+}
+
+.row_image_inner{
+    height: inherit;
+}
+
+.row_index{
+    width: 15%;
+}
+
+.row_name{
+    width: 25%;;
+}
+
+.row_hp{
+    width: 15%;
+}
+
+.row_type{
+    width: 25%;
+}
+
+/* Pagination */
+
+#pagination{
+    display: flex;
+    margin:auto;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.pagination_button{
+    border: 1px solid;
+    padding: 10px;
+}
+
+.highlight{
+  font-weight: bold;
+  background: mediumturquoise;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+  
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+#page_size {
+  border: 2px solid #ddd;
+  display: inline-flex;
+  text-align-last: center;
+}
+
+#page_size,
+#page_size * {
+  box-sizing: border-box;
+}
+
+#page_size button {
+  outline:none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+}
+
+#page_size button:before,
+#page_size button:after {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 1rem;
+  height: 2px;
+  background-color: #212121;
+  transform: translate(-50%, -50%);
+}
+#page_size button.plus:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+#page_size input[type=number] {
+  max-width: 3rem;
+  border: solid #ddd;
+  border-width: 0 2px;
+  font-weight: bold;
+}
+
+
+/* Modal image */
+
+.row_image_inner{
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#row_image_inner hover{
+  opacity: 0.7;
+}
+
+.modal{
+  position: fixed;
+  z-index: 1;
+  width: fit-content;
+  margin-left: 25%;
+  background-color: white;
+}
+
+.modal_content {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 700px;
+}
+
+.modal_content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover, .close:focus{
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Toggle */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 10px;
+
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#toggle {
+  display: flex;
+  align-items: center;
+}
+
+/* Tiles */
+
+.details{
+  display:flex;
+  justify-content: center;
+}
+
+#right{
+  display:flex;
+  flex-direction: column;
+}
+
+#stats{
+  text-align: center;
+}
+
+.tile {
+  border: 1px grey solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  max-width: 40%;
+}
+
+#main_image {
+  max-width: 50%;
+}
+
+#name {
+  font-size: 26px;
+}
+
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Dit zorgt ervoor dat de tabel leesbaar blijft op kleinere schermen */
+@media only screen and (max-width: 810px) {
+  #main_table {
+    width:100%;
+  }
+}
